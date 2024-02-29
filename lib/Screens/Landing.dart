@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
+import 'package:provider_prac/Screens/UserDetailTab.dart';
 import 'package:provider_prac/Screens/UserDetails.dart';
 import 'package:provider_prac/providers/Userprovider.dart';
 import 'package:provider_prac/providers/color_provider.dart';
@@ -44,7 +45,7 @@ class _LandingPageState extends State<LandingPage> {
           final website = user['website'];
       
         return id==value.userid?GestureDetector(
-          onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context)=> UserDetail(id: value.userid, name: name, email: email, phone: phone, companyName: company_name, website: website, username: username,) ));},
+          onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context)=> UserTab(id: value.userid, name: name, email: email, phone: phone, companyName: company_name, website: website, username: username,) ));},
           child: Card(
             elevation: 10,
             margin: EdgeInsets.all(8),
