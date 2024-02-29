@@ -60,7 +60,7 @@ class _UserPostsState extends State<UserPosts> {
           final post = posts[index];
           final int userid = post['userId'];
           final title = post['title'];
-          
+          final body = post['body'];          
           
           return widget.id==userid? Card(
             margin: EdgeInsets.all(10),
@@ -71,6 +71,7 @@ class _UserPostsState extends State<UserPosts> {
                 child: Column(
                   children: [
                     Text(title),
+                    Text(body)
                   ],
                 ),
               ),

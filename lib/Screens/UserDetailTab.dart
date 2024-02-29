@@ -38,10 +38,13 @@ class _UserTabState extends State<UserTab> {
             )
           ],
           ),
-          TabBarView(children: [
+          Expanded(
+          
+            child: TabBarView(children: [
             UserPosts(id: widget.id, username: widget.username, name: widget.name, email: widget.email, phone: widget.phone, companyName: widget.companyName, website: widget.website),
             UserAlbum(id: widget.id, username: widget.username, name: widget.name, email: widget.email, phone: widget.phone, companyName: widget.companyName, website: widget.website),
-          ])
+          ]),
+          )
         ],
       ),
       
